@@ -48,11 +48,11 @@ func (f *File) ApproximatedName() (string, error) {
 
 // Size returns the size in bytes of the file.  It returns the sum of the sizes
 // of its segments.
-func (f *File) Size() (size uint64) {
+func (f *File) Size() (size int64) {
 	// iterate over all file segments
 	for _, segment := range f.Segments {
 		// add the segment's size to the file's size
-		size += uint64(segment.Size)
+		size += int64(segment.Size)
 	}
 	return size
 }

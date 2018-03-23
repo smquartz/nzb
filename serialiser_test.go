@@ -39,7 +39,7 @@ func TestNzbSerialisation(t *testing.T) {
 		t.Errorf("Wrong number of segments for file 1: %d", len(f.Segments))
 	}
 
-	var expectedSize uint64 = 3538339983
+	var expectedSize int64 = 3538339983
 	if size := n.Size(); size != expectedSize {
 		t.Errorf("Wrong NZB size; got %d expected %d", size, expectedSize)
 	}
