@@ -62,7 +62,7 @@ func (m Meta) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 }
 
 // Size returns the sum of the file sizes within the NZB
-func (nzb *NZB) Size() (size int64) {
+func (nzb NZB) Size() (size int64) {
 	// iterate over all Files in the NZB
 	for _, file := range nzb.Files {
 		// add the file's size to the total
