@@ -110,7 +110,7 @@ func TestNzbSerialisation(t *testing.T) {
 		t.Errorf("f.ApproximatedName() should have errored")
 	}
 
-	n, err = FromFile("./nzb_test_data.xml")
+	n, err = FromFile("./samples/ValidNzb2.nzb")
 	if err != nil {
 		t.Errorf("Failed to parse test XML; %v", err)
 	}
