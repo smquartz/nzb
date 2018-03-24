@@ -9,7 +9,7 @@ func TestMoreNzb(t *testing.T) {
 	// not nzb
 	_, err := FromFile(notNzbPath)
 	if err == nil {
-		t.Errorf("Failed to error on invalid NZB file", err)
+		t.Errorf("Failed to error on invalid NZB file: %v", err)
 	}
 
 	// no files nzb
